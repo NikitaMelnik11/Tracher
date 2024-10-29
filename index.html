@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habit Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="icon" type="images/x-icon"
+    href="https://cdn.icon-icons.com/icons2/10/PNG/256/add_insert_plus_1588.png">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <button id="menu-toggle" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <h1>Habit Tracker</h1>
+            <button id="add-habit-btn" aria-label="Add new habit">
+                <i class="fas fa-plus"></i>
+            </button>
+        </header>
+        <nav id="menu">
+            <div class="menu-header">
+                <h2>Menu</h2>
+                <button id="close-menu" aria-label="Close menu">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <ul>
+                <li><a href="#" id="view-all"><i class="fas fa-list"></i> All Habits</a></li>
+                <li><a href="#" id="view-active"><i class="fas fa-clock"></i> Active Habits</a></li>
+                <li><a href="#" id="view-completed"><i class="fas fa-check-circle"></i> Completed Habits</a></li>
+                <li><a href="#" id="clear-all"><i class="fas fa-trash-alt"></i> Clear All Habits</a></li>
+            </ul>
+        </nav>
+        <main>
+            <div class="stats-container">
+                <div id="habit-stats">
+                    <div class="stat">
+                        <i class="fas fa-list-ul"></i>
+                        <span id="total-habits">0</span>
+                        <p>Total</p>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-check-circle"></i>
+                        <span id="completed-habits">0</span>
+                        <p>Completed</p>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-percentage"></i>
+                        <span id="completion-rate">0%</span>
+                        <p>Completion</p>
+                    </div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress" id="progress-bar"></div>
+                </div>
+            </div>
+            <div id="habits-container">
+                <div id="habit-filter">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="active">Active</button>
+                    <button class="filter-btn" data-filter="completed">Completed</button>
+                </div>
+                <ul id="habit-list"></ul>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
